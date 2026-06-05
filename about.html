@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-page="about">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>About — Simpli Studio</title>
+    <meta name="description" content="About — Simpli Studio" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Simpli Studio home">
+          <img
+            class="brand__logo"
+            id="siteLogo"
+            src="assets/Logo-1.png"
+            alt="Simpli Studio logo"
+            width="64"
+            height="64"
+            decoding="async"
+          />
+          <span class="brand__wordmark">Simpli Studio</span>
+        </a>
+
+        <div class="nav__desktop">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            title="Toggle theme"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__inner">
+          <a class="mobile-menu__link gated-link" href="work.html">Work</a>
+          <a class="mobile-menu__link gated-link" href="services.html">Services</a>
+          <a class="mobile-menu__link gated-link" href="about.html">About</a>
+          <a class="mobile-menu__link gated-link" href="contact.html">Contact</a>
+          <a class="mobile-menu__link" href="index.html">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">About</p>
+            <h1 class="page__title">Turning restraint into impact.</h1>
+            <p class="section__subtitle">
+              Calm layouts. Sharp typography. Systems that scale.
+            </p>
+          </header>
+
+          <div class="about__grid">
+            <div class="about__text reveal">
+              <p>
+                Simpli Studio is a premium social media agency built for brands that
+                prefer clarity over clutter.
+              </p>
+              <p>
+                We design content systems, visuals, and direction that feel editorial:
+                purposeful whitespace, sharp hierarchy, and clean execution.
+              </p>
+              <p>
+                Every deliverable is built to support a consistent brand presence—
+                across posts, stories, reels, and campaigns.
+              </p>
+            </div>
+
+            <div class="about__facts reveal" aria-label="Key details">
+              <div class="fact">
+                <span class="fact__label">Core Services</span>
+                <span class="fact__value">Management · Content · Design</span>
+              </div>
+              <div class="fact">
+                <span class="fact__label">Style</span>
+                <span class="fact__value">Luxury minimalism</span>
+              </div>
+              <div class="fact">
+                <span class="fact__label">Location</span>
+                <span class="fact__value">Davao, Philippines</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn gated-link" href="contact.html">Work with us</a>
+            <a class="btn btn--ghost" href="index.html">Back home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <a class="footer__link" href="mailto:hello@simplistudio.com">hello@simplistudio.com</a>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">Davao, Philippines</span>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">ESTD. 2026 | Simpli Studio</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

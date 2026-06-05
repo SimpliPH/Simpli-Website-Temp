@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-page="work">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Work — Simpli Studio</title>
+    <meta name="description" content="Work — Simpli Studio" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Simpli Studio home">
+          <img
+            class="brand__logo"
+            id="siteLogo"
+            src="assets/Logo-1.png"
+            alt="Simpli Studio logo"
+            width="64"
+            height="64"
+            decoding="async"
+          />
+          <span class="brand__wordmark">Simpli Studio</span>
+        </a>
+
+        <div class="nav__desktop">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            title="Toggle theme"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__inner">
+          <a class="mobile-menu__link gated-link" href="work.html">Work</a>
+          <a class="mobile-menu__link gated-link" href="services.html">Services</a>
+          <a class="mobile-menu__link gated-link" href="about.html">About</a>
+          <a class="mobile-menu__link gated-link" href="contact.html">Contact</a>
+          <a class="mobile-menu__link" href="index.html">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">Work</p>
+            <h1 class="page__title">Selected work, kept minimal.</h1>
+            <p class="section__subtitle">
+              Replace placeholders with real visuals whenever you’re ready.
+            </p>
+          </header>
+
+          <div class="masonry" aria-label="Work grid">
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="tall"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Launch</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="wide"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Content</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="square"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Design</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="tall"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Campaign</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="square"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Growth</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal">
+              <div class="work-tile__media" data-size="wide"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Direction</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn" href="index.html">Back home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <a class="footer__link" href="mailto:hello@simplistudio.com">hello@simplistudio.com</a>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">Davao, Philippines</span>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">ESTD. 2026 | Simpli Studio</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

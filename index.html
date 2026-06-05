@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-page="index">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Simpli Studio — Premium Social Media Agency</title>
+    <meta
+      name="description"
+      content="Simpli Studio — Turning Ideas Into Visual Experiences. Content Creation, Social Media Management, Graphic Design."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Simpli Studio home">
+          <img
+            class="brand__logo"
+            id="siteLogo"
+            src="assets/Logo-1.png"
+            alt="Simpli Studio logo"
+            width="64"
+            height="64"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <span class="brand__wordmark">Simpli Studio</span>
+        </a>
+
+        <div class="nav__desktop">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            title="Toggle theme"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__inner">
+          <a class="mobile-menu__link gated-link" href="work.html">Work</a>
+          <a class="mobile-menu__link gated-link" href="services.html">Services</a>
+          <a class="mobile-menu__link gated-link" href="about.html">About</a>
+          <a class="mobile-menu__link gated-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <p class="kicker">Premium Social Media Agency</p>
+            <h1 class="hero__title">
+              Digital growth,
+              <span class="hero__title-accent">crafted</span> with visual
+              storytelling.
+            </h1>
+            <p class="hero__subtitle">
+              <strong>Simpli Studio</strong> helps brands show up with clarity
+              and consistency—through content creation, social media management,
+              and graphic design.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn gated-link" href="contact.html">Start a project</a>
+              <p class="micro">
+                Slogan:
+                <span class="serif">Turning Ideas Into Visual Experiences</span>
+              </p>
+            </div>
+          </div>
+
+          <aside class="hero__aside reveal" aria-label="Highlights">
+            <div class="hero-card">
+              <p class="hero-card__label">Core Services</p>
+              <p class="hero-card__value">
+                Social Media Management · Content Creation · Graphic Design
+              </p>
+            </div>
+            <div class="hero-card">
+              <p class="hero-card__label">Aesthetic</p>
+              <p class="hero-card__value">High-end minimalism with editorial rhythm.</p>
+            </div>
+            <div class="hero-card">
+              <p class="hero-card__label">Based</p>
+              <p class="hero-card__value">Davao, Philippines</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SERVICES (preview) -->
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">Services</p>
+            <h2 class="section__title">Built for modern, premium brands.</h2>
+            <p class="section__subtitle">
+              Explore the full services page for deliverables and scope.
+            </p>
+          </header>
+
+          <div class="services">
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Social Media Management</h3>
+              <p class="service-card__text">
+                Consistent publishing, community care, and clarity across platforms.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Content Creation</h3>
+              <p class="service-card__text">
+                Visual storytelling crafted to perform—clean, refined, editorial.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Graphic Design</h3>
+              <p class="service-card__text">
+                Premium layouts and design systems that stay unmistakably you.
+              </p>
+            </article>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn btn--ghost gated-link" href="services.html">View services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK (preview, no case study wording) -->
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">Work</p>
+            <h2 class="section__title">A quiet grid of visual proof.</h2>
+            <p class="section__subtitle">
+              Minimal placeholders—replace with real projects anytime.
+            </p>
+          </header>
+
+          <div class="masonry" aria-label="Work grid">
+            <div class="work-tile reveal" aria-label="Project placeholder">
+              <div class="work-tile__media" data-size="tall"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Launch</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal" aria-label="Project placeholder">
+              <div class="work-tile__media" data-size="wide"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Content</span>
+              </div>
+            </div>
+
+            <div class="work-tile reveal" aria-label="Project placeholder">
+              <div class="work-tile__media" data-size="square"></div>
+              <div class="work-tile__meta">
+                <span class="serif">Project</span>
+                <span class="muted">Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn btn--ghost gated-link" href="work.html">View work</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT (preview) -->
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">About</p>
+            <h2 class="section__title">Minimal on purpose.</h2>
+            <p class="section__subtitle">
+              Learn how we think, what we value, and how we work.
+            </p>
+          </header>
+
+          <div class="two-col">
+            <div class="reveal">
+              <p class="lead">
+                Simpli Studio is a boutique social media agency built for founders and
+                teams who care about taste, pace, and precision.
+              </p>
+            </div>
+            <div class="reveal">
+              <p class="muted">
+                We balance strategy and aesthetics—sharp typography, calm layouts,
+                and content systems designed to scale without noise.
+              </p>
+            </div>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn btn--ghost gated-link" href="about.html">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (preview) -->
+      <section class="section contact contact--preview">
+        <div class="container">
+          <header class="contact__header reveal">
+            <p class="kicker">Contact</p>
+            <h2 class="contact__title">
+              <a class="contact__link gated-link" href="contact.html">Let’s work together.</a>
+            </h2>
+            <p class="contact__subtitle">
+              Email:
+              <a class="inline-link" href="mailto:hello@simplistudio.com">hello@simplistudio.com</a>
+            </p>
+          </header>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <a class="footer__link" href="mailto:hello@simplistudio.com">hello@simplistudio.com</a>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">Davao, Philippines</span>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">ESTD. 2026 | Simpli Studio</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

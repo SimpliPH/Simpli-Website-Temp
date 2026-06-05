@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-page="services">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Services — Simpli Studio</title>
+    <meta name="description" content="Services — Simpli Studio" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Simpli Studio home">
+          <img
+            class="brand__logo"
+            id="siteLogo"
+            src="assets/Logo-1.png"
+            alt="Simpli Studio logo"
+            width="64"
+            height="64"
+            decoding="async"
+          />
+          <span class="brand__wordmark">Simpli Studio</span>
+        </a>
+
+        <div class="nav__desktop">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            title="Toggle theme"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+          </button>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__inner">
+          <a class="mobile-menu__link gated-link" href="work.html">Work</a>
+          <a class="mobile-menu__link gated-link" href="services.html">Services</a>
+          <a class="mobile-menu__link gated-link" href="about.html">About</a>
+          <a class="mobile-menu__link gated-link" href="contact.html">Contact</a>
+          <a class="mobile-menu__link" href="index.html">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section">
+        <div class="container">
+          <header class="section__header reveal">
+            <p class="kicker">Services</p>
+            <h1 class="page__title">Three core services. One clear standard.</h1>
+            <p class="section__subtitle">
+              High-end minimalism, executed with consistency.
+            </p>
+          </header>
+
+          <div class="services">
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Social Media Management</h3>
+              <p class="service-card__text">
+                Content calendars, scheduling, reporting, and brand voice—kept clean and consistent.
+              </p>
+              <ul class="service-card__list">
+                <li>Content calendar + cadence</li>
+                <li>Scheduling & reporting</li>
+                <li>Community management support</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Content Creation</h3>
+              <p class="service-card__text">
+                Visual storytelling designed to perform—short-form, editorial, refined.
+              </p>
+              <ul class="service-card__list">
+                <li>Short-form video direction</li>
+                <li>Copy & captions</li>
+                <li>Creative guidelines</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal">
+              <h3 class="service-card__title">Graphic Design</h3>
+              <p class="service-card__text">
+                Premium templates and campaign visuals that preserve clarity and taste.
+              </p>
+              <ul class="service-card__list">
+                <li>Social template systems</li>
+                <li>Campaign layouts</li>
+                <li>Brand collateral</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="section__cta reveal">
+            <a class="btn gated-link" href="contact.html">Ask for a quote</a>
+            <a class="btn btn--ghost" href="index.html">Back home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <a class="footer__link" href="mailto:hello@simplistudio.com">hello@simplistudio.com</a>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">Davao, Philippines</span>
+        <span class="footer__sep">•</span>
+        <span class="footer__text">ESTD. 2026 | Simpli Studio</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
