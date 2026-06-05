@@ -397,7 +397,7 @@ html[data-theme="dark"] .theme-dot {
 
 /* Hero */
 .hero {
-  padding: 56px 0 120px;
+  padding: 56px 0 80px;
 }
 
 .hero .container {
@@ -410,9 +410,15 @@ html[data-theme="dark"] .theme-dot {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
   gap: 34px;
-  align-items: start;
+  align-items: center;
   width: 100%;
   max-width: var(--max);
+}
+
+.hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero__title {
@@ -449,18 +455,27 @@ html[data-theme="dark"] .theme-dot {
 
 .hero__aside {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  height: fit-content;
 }
 
 .hero-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 16px 16px 14px;
+  padding: 18px 18px 16px;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
+  transition: transform 0.25s var(--ease), box-shadow 0.35s var(--ease),
+    border-color 0.35s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--fg) 18%, var(--border));
 }
 
 .hero-card__label {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   color: var(--muted);
   font-size: 0.85rem;
   letter-spacing: 0.12em;
@@ -471,6 +486,7 @@ html[data-theme="dark"] .theme-dot {
   margin: 0;
   font-size: 1rem;
   letter-spacing: -0.01em;
+  line-height: 1.5;
 }
 
 /* Buttons */
@@ -742,7 +758,8 @@ html[data-theme="dark"] .theme-dot {
 .footer {
   border-top: 1px solid var(--border);
   padding: 40px 0;
-  margin-top: auto;
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .footer__inner {
