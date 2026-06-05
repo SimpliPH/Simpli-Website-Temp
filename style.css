@@ -176,7 +176,7 @@ a {
   text-overflow: ellipsis;
 }
 
-/* Theme toggle (circle only + streak lines in light mode) */
+/* Theme toggle */
 .theme-toggle {
   width: 42px;
   height: 42px;
@@ -239,7 +239,7 @@ html[data-theme="dark"] .theme-dot {
   background: rgba(255, 255, 255, 0.92);
 }
 
-/* Hamburger (middle bar shorter + slightly inset from left) */
+/* Hamburger */
 .hamburger {
   width: 44px;
   height: 44px;
@@ -272,7 +272,7 @@ html[data-theme="dark"] .theme-dot {
   opacity: 0.9;
 }
 
-/* Mobile dropdown menu - Floating banner on the right */
+/* Mobile dropdown menu */
 .mobile-menu {
   position: fixed;
   top: 80px;
@@ -395,9 +395,13 @@ html[data-theme="dark"] .theme-dot {
   justify-content: center;
 }
 
-/* Hero */
+/* Hero layout */
 .hero {
-  padding: 56px 0 80px;
+  padding: 56px 0;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .container {
@@ -406,7 +410,7 @@ html[data-theme="dark"] .theme-dot {
   width: 100%;
 }
 
-.hero__grid {
+.hero .hero__grid {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
   gap: 34px;
@@ -618,6 +622,18 @@ html[data-theme="dark"] .theme-dot {
   height: 260px;
 }
 
+.work-tile__media {
+  overflow: hidden;
+  background: color-mix(in srgb, var(--fg) 7%, transparent);
+}
+
+.work-tile__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .work-tile__meta {
   display: flex;
   justify-content: space-between;
@@ -693,7 +709,7 @@ html[data-theme="dark"] .theme-dot {
   letter-spacing: -0.01em;
 }
 
-/* Simple two-col helper (index previews) */
+/* Simple two-col helper */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -711,7 +727,7 @@ html[data-theme="dark"] .theme-dot {
   line-height: 1.7;
 }
 
-/* Contact (centered) */
+/* Contact */
 .contact__header {
   text-align: center;
   margin-inline: auto;
@@ -815,7 +831,7 @@ html[data-theme="dark"] .theme-dot {
 
 /* Responsive */
 @media (max-width: 980px) {
-  .hero__grid {
+  .hero .hero__grid {
     grid-template-columns: 1fr;
   }
 
