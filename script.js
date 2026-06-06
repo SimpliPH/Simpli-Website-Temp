@@ -14,6 +14,43 @@ const logoEl = document.getElementById("siteLogo");
 const themeToggle = document.getElementById("themeToggle");
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
+const workGrid = document.getElementById("work-grid");
+
+const projects = [
+  {
+    title: "Simpli Studio Launch",
+    description:
+      "A clean identity anchor built to introduce the studio with clarity and confidence.",
+    image: "assets/Logo-1.png",
+    alt: "Simpli Studio launch project tile",
+    size: "square",
+    modalWriter: "Simpli Studio",
+    modalContent:
+      "A foundational launch project built to establish Simpli Studio's visual and editorial direction. We defined a calm, modern identity system, built baseline social content templates, and created a sustainable content cadence that helped early clients communicate with consistency and clarity.",
+  },
+  {
+    title: "Project Bloome",
+    description:
+      "Fresh homemade donuts presented through a clean, product-forward visual system.",
+    image: "assets/Frame 1 final fix.png",
+    alt: "Project Bloome donut presentation",
+    size: "wide",
+    modalWriter: "Creative Team",
+    modalContent:
+      "For Bloome, we translated a handcrafted product story into a clean visual campaign. The scope covered content planning, product-focused photography direction, and short-form social rollouts designed to feel warm, fresh, and highly shareable.",
+  },
+  {
+    title: "Website Menu Study",
+    description:
+      "A close-up look at the website menu page, framed for clean navigation and brand consistency.",
+    image: "assets/website.png",
+    alt: "Website menu page project tile",
+    size: "wide",
+    modalWriter: "Web Experience",
+    modalContent:
+      "A detailed UI study of the website menu page, focused on clarity, hierarchy, and smooth navigation flow. The composition highlights how the interface supports a polished brand experience while keeping the layout simple and easy to scan.",
+  },
+];
 
 function getTheme() {
   return htmlEl.getAttribute("data-theme") === "dark" ? "dark" : "light";
@@ -132,6 +169,59 @@ function initRevealAnimations() {
   items.forEach((el) => observer.observe(el));
 }
 
+function isValidImageString(value) {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function createWorkTile(project) {
+  const tile = document.createElement("article");
+  tile.className = "work-tile reveal";
+  tile.setAttribute("role", "button");
+  tile.setAttribute("tabindex", "0");
+  tile.setAttribute("aria-haspopup", "dialog");
+  tile.dataset.modalTitle = project.title;
+  tile.dataset.modalContent = project.modalContent || project.description;
+  tile.dataset.modalWriter = project.modalWriter || "Simpli Studio";
+
+  const media = document.createElement("div");
+  media.className = "work-tile__media";
+  if (project.size) media.dataset.size = project.size;
+
+  const image = document.createElement("img");
+  image.src = project.image;
+  image.alt = project.alt || project.title;
+  image.loading = "lazy";
+
+  media.appendChild(image);
+
+  const meta = document.createElement("div");
+  meta.className = "work-tile__meta";
+
+  const title = document.createElement("span");
+  title.className = "serif";
+  title.textContent = project.title;
+
+  const description = document.createElement("span");
+  description.className = "muted";
+  description.textContent = project.description;
+
+  meta.append(title, description);
+  tile.append(media, meta);
+
+  return tile;
+}
+
+function initWorkGrid() {
+  if (!workGrid) return;
+
+  workGrid.innerHTML = "";
+
+  const validProjects = projects.filter((project) => isValidImageString(project.image));
+  validProjects.forEach((project) => {
+    workGrid.appendChild(createWorkTile(project));
+  });
+}
+
 /* ---------- Work detail modal ---------- */
 function initWorkModal() {
   const workModal = document.getElementById("workModal");
@@ -141,9 +231,9 @@ function initWorkModal() {
   const modalContent = document.getElementById("workModalContent");
   const modalWriter = document.getElementById("workModalWriter");
   const closeButton = document.getElementById("workModalClose");
-  const masonry = document.querySelector(".masonry");
+  const grid = document.getElementById("work-grid");
 
-  if (!modalTitle || !modalContent || !modalWriter || !closeButton || !masonry) {
+  if (!modalTitle || !modalContent || !modalWriter || !closeButton || !grid) {
     return;
   }
 
@@ -193,13 +283,13 @@ function initWorkModal() {
     }, 500);
   }
 
-  masonry.addEventListener("click", (event) => {
+  grid.addEventListener("click", (event) => {
     const tile = event.target.closest(".work-tile");
     if (!tile) return;
     openModal(tile);
   });
 
-  masonry.addEventListener("keydown", (event) => {
+  grid.addEventListener("keydown", (event) => {
     const tile = event.target.closest(".work-tile");
     if (!tile) return;
 
@@ -225,5 +315,6 @@ initTheme();
 initThemeToggle();
 initMobileMenu();
 initGatedLinks();
+initWorkGrid();
 initRevealAnimations();
 initWorkModal();
