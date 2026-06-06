@@ -132,6 +132,93 @@ function initRevealAnimations() {
   items.forEach((el) => observer.observe(el));
 }
 
+/* ---------- Work detail modal ---------- */
+function initWorkModal() {
+  const workModal = document.getElementById("workModal");
+  if (!workModal) return;
+
+  const modalTitle = document.getElementById("workModalTitle");
+  const modalContent = document.getElementById("workModalContent");
+  const modalWriter = document.getElementById("workModalWriter");
+  const closeButton = document.getElementById("workModalClose");
+  const masonry = document.querySelector(".masonry");
+
+  if (!modalTitle || !modalContent || !modalWriter || !closeButton || !masonry) {
+    return;
+  }
+
+  let activeTile = null;
+  let closeTimer = null;
+
+  function setModalData(tile) {
+    const fallbackTitle = tile.querySelector(".work-tile__meta .serif")?.textContent?.trim() || "Project details";
+    const fallbackContent = tile.querySelector(".work-tile__meta .muted")?.textContent?.trim() || "";
+
+    modalTitle.textContent = (tile.dataset.modalTitle || fallbackTitle).trim();
+    modalContent.textContent = (tile.dataset.modalContent || fallbackContent).trim();
+    modalWriter.textContent = `Writer / ${tile.dataset.modalWriter || "Simpli Studio"}`;
+  }
+
+  function clearCloseTimer() {
+    if (!closeTimer) return;
+    clearTimeout(closeTimer);
+    closeTimer = null;
+  }
+
+  function openModal(tile) {
+    clearCloseTimer();
+    activeTile = tile;
+    setModalData(tile);
+
+    workModal.hidden = false;
+    document.body.classList.add("modal-open");
+
+    requestAnimationFrame(() => {
+      workModal.classList.add("is-open");
+      closeButton.focus();
+    });
+  }
+
+  function closeModal() {
+    if (workModal.hidden) return;
+
+    workModal.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+
+    clearCloseTimer();
+    closeTimer = window.setTimeout(() => {
+      workModal.hidden = true;
+      if (activeTile) activeTile.focus();
+      activeTile = null;
+    }, 500);
+  }
+
+  masonry.addEventListener("click", (event) => {
+    const tile = event.target.closest(".work-tile");
+    if (!tile) return;
+    openModal(tile);
+  });
+
+  masonry.addEventListener("keydown", (event) => {
+    const tile = event.target.closest(".work-tile");
+    if (!tile) return;
+
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    openModal(tile);
+  });
+
+  workModal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-modal-close]") || event.target === closeButton || event.target.closest("#workModalClose")) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeModal();
+  });
+}
+
 /* Init */
 requireGateOrRedirect();
 initTheme();
@@ -139,3 +226,4 @@ initThemeToggle();
 initMobileMenu();
 initGatedLinks();
 initRevealAnimations();
+initWorkModal();

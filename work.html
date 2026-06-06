@@ -83,7 +83,15 @@
           </header>
 
           <div class="masonry" aria-label="Work grid">
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Simpli Studio Brand Launch"
+              data-modal-content="A foundational launch project built to establish Simpli Studio's visual and editorial direction. We defined a calm, modern identity system, built baseline social content templates, and created a sustainable content cadence that helped early clients communicate with consistency and clarity."
+              data-modal-writer="Simpli Studio"
+            >
               <div class="work-tile__media" data-size="tall">
                 <img src="assets/Logo-1.png" alt="Project — Launch" loading="lazy" width="800" height="1200">
               </div>
@@ -93,7 +101,15 @@
               </div>
             </div>
 
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Project Bloome"
+              data-modal-content="For Bloome, we translated a handcrafted product story into a clean visual campaign. The scope covered content planning, product-focused photography direction, and short-form social rollouts designed to feel warm, fresh, and highly shareable."
+              data-modal-writer="Creative Team"
+            >
               <div class="work-tile__media" data-size="wide">
                 <img src="assets/Frame 1 final fix.png" alt="Project — Content" loading="lazy" width="1200" height="700">
               </div>
@@ -103,7 +119,15 @@
               </div>
             </div>
 
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Design Systems Sprint"
+              data-modal-content="A fast-turn engagement focused on shaping a lightweight design system for a growing business. We audited existing assets, unified typography and spacing scales, and documented practical component rules so content and design could move faster without losing quality."
+              data-modal-writer="Design Desk"
+            >
               <div class="work-tile__media" data-size="square">
                 <img src="assets/work-3.jpg" alt="Project — Design" loading="lazy" width="800" height="800">
               </div>
@@ -113,7 +137,15 @@
               </div>
             </div>
 
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Campaign Direction"
+              data-modal-content="This campaign emphasized message discipline across channels. We handled concept framing, narrative sequencing, and creative direction for a multi-week rollout, ensuring every touchpoint reinforced one clear brand promise."
+              data-modal-writer="Campaign Unit"
+            >
               <div class="work-tile__media" data-size="tall">
                 <img src="assets/work-4.jpg" alt="Project — Campaign" loading="lazy" width="800" height="1200">
               </div>
@@ -123,7 +155,15 @@
               </div>
             </div>
 
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Growth Content Program"
+              data-modal-content="A structured content program designed to improve consistency and measurable engagement. We combined platform-specific copy frameworks with visual storytelling guidelines, then implemented a recurring production process that reduced friction for the client team."
+              data-modal-writer="Growth Studio"
+            >
               <div class="work-tile__media" data-size="square">
                 <img src="assets/work-5.jpg" alt="Project — Growth" loading="lazy" width="800" height="800">
               </div>
@@ -133,7 +173,15 @@
               </div>
             </div>
 
-            <div class="work-tile reveal">
+            <div
+              class="work-tile reveal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              data-modal-title="Creative Direction Partnership"
+              data-modal-content="An ongoing partnership focused on long-term visual direction. We provide strategic oversight for content aesthetics, campaign tone, and rollout consistency so every release feels intentional, cohesive, and unmistakably on-brand."
+              data-modal-writer="Direction Lead"
+            >
               <div class="work-tile__media" data-size="wide">
                 <img src="assets/work-6.jpg" alt="Project — Direction" loading="lazy" width="1200" height="700">
               </div>
@@ -160,6 +208,31 @@
         <span class="footer__text">EST. 2026 | Simpli Studio</span>
       </div>
     </footer>
+
+    <div class="work-modal" id="workModal" hidden>
+      <div class="work-modal__overlay" data-modal-close></div>
+      <article
+        class="work-modal__card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="workModalTitle"
+        aria-describedby="workModalContent"
+      >
+        <button class="work-modal__close" id="workModalClose" type="button" aria-label="Close project details">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <header class="work-modal__header">
+          <h2 class="work-modal__title" id="workModalTitle">Project details</h2>
+        </header>
+
+        <div class="work-modal__body" id="workModalContent"></div>
+
+        <footer class="work-modal__footer">
+          <p class="work-modal__writer" id="workModalWriter">Writer</p>
+        </footer>
+      </article>
+    </div>
 
     <script src="script.js" defer></script>
   </body>
